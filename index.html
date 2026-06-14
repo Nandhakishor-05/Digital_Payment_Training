@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Payment Training</title>
+  <meta name="description" content="Everything you need to know about UPI Payments — benefits, setup guide, safety tips, and top UPI apps.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a href="#" class="logo" id="logoHome">
+        <span class="logo-icon">⚡</span>
+        <span class="logo-text">UPI Guide</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" id="mainNav">
+        <a href="#benefits" class="nav-link" data-page="home">⚡ Benefits</a>
+        <a href="#how-to-use" class="nav-link" data-page="home">✓ How to Use</a>
+        <a href="#apps" class="nav-link" data-page="home">📱 UPI Apps</a>
+        <a href="#dashboard" class="nav-link" data-page="dashboard">▦ Dashboard</a>
+      </nav>
+    </div>
+  </header>
+
+  <div id="homePage">
+    <!-- Hero -->
+    <section class="hero" id="hero">
+      <div class="hero-bg"></div>
+      <div class="container hero-content">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          Powered by NPCI · Trusted by 500M+ Indians
+        </div>
+        <h1 class="hero-title">
+          Everything you need to know about <span class="text-accent">UPI Payments</span>
+        </h1>
+        <p class="hero-subtitle">
+          Discover the benefits, step-by-step setup guide, safety tips, and compare the top UPI apps — PhonePe, Google Pay, BHIM, Amazon Pay &amp; more.
+        </p>
+        <div class="hero-actions">
+          <a href="#apps" class="btn btn-primary">Explore UPI Apps →</a>
+          <a href="#how-to-use" class="btn btn-outline">How to Use UPI</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- UPI Apps -->
+    <section class="section section-alt" id="apps">
+      <div class="container">
+        <div class="section-label">📱 Top Apps</div>
+        <h2 class="section-title">Top UPI Payment Apps</h2>
+        <p class="section-desc">Compare India's best UPI apps — features, ratings, and what makes each one unique.</p>
+        <div class="apps-grid" id="appsGrid"></div>
+        <div class="trust-banner">
+          <div class="trust-icon">✓</div>
+          <div>
+            <h3>All apps are RBI &amp; NPCI approved</h3>
+            <p>Every UPI app listed here is regulated by the Reserve Bank of India and built on NPCI's secure UPI infrastructure.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Use -->
+    <section class="section" id="how-to-use">
+      <div class="container">
+        <div class="section-label section-label-blue">Step by Step</div>
+        <h2 class="section-title">How to Use UPI</h2>
+        <p class="section-desc">Get started with UPI in under 5 minutes. Follow these simple steps.</p>
+        <div class="steps-list" id="stepsList"></div>
+      </div>
+    </section>
+
+    <!-- Safety Tips -->
+    <section class="section section-alt" id="safety">
+      <div class="container">
+        <div class="section-label section-label-red">Stay Safe</div>
+        <h2 class="section-title">UPI Safety Tips</h2>
+        <p class="section-desc">UPI is secure by design — but awareness protects you from fraud. Follow these golden rules.</p>
+        <div class="tips-grid" id="tipsGrid"></div>
+      </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="section" id="benefits">
+      <div class="container">
+        <div class="section-label section-label-green">Why UPI?</div>
+        <h2 class="section-title">Key Benefits of UPI</h2>
+        <p class="section-desc">UPI has transformed how India pays. Here's why over 500 million people use it every day.</p>
+        <div class="benefits-grid" id="benefitsGrid"></div>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats-section">
+      <div class="container stats-grid" id="statsGrid"></div>
+    </section>
+  </div>
+
+  <!-- Dashboard -->
+  <div id="dashboardPage" class="hidden">
+    <section class="section dashboard-section">
+      <div class="container">
+        <div class="section-label section-label-green">Overview</div>
+        <h2 class="section-title">UPI Dashboard</h2>
+        <p class="section-desc">Quick snapshot of India's UPI ecosystem and your learning progress.</p>
+        <div class="dashboard-stats" id="dashboardStats"></div>
+        <div class="dashboard-panels">
+          <div class="panel">
+            <h3>Apps Explored</h3>
+            <p class="panel-value" id="appsExplored">0 / 6</p>
+            <p class="panel-hint">Open "Show features" on any app card to track progress.</p>
+          </div>
+          <div class="panel">
+            <h3>Safety Tips Read</h3>
+            <p class="panel-value" id="tipsRead">0 / 6</p>
+            <p class="panel-hint">Scroll through the safety section to mark tips as read.</p>
+          </div>
+          <div class="panel">
+            <h3>Setup Steps Viewed</h3>
+            <p class="panel-value" id="stepsViewed">0 / 5</p>
+            <p class="panel-hint">View the "How to Use UPI" section to track steps.</p>
+          </div>
+        </div>
+        <div class="panel dashboard-apps">
+          <h3>Quick Links — Top UPI Apps</h3>
+          <div class="dashboard-links" id="dashboardLinks"></div>
+        </div>
+      </div>
+    </section>
+    <section class="stats-section">
+      <div class="container stats-grid" id="dashboardStatsBottom"></div>
+    </section>
+  </div>
+  <!-- Gallery Section -->
+<section class="section section-alt" id="gallery">
+  <div class="container">
+    <div class="section-label section-label-blue">📷 Gallery</div>
+
+    <h2 class="section-title">
+      Digital Payment Awareness Gallery
+    </h2>
+
+    <p class="section-desc">
+      Learn digital payments through visual examples, UPI transactions,
+      QR code scanning, mobile banking, and secure online payments.
+    </p>
+
+    <div class="gallery-grid">
+
+      <div class="gallery-card">
+        <img src="img1.jpeg" alt="UPI Payment">
+      </div>
+
+      <div class="gallery-card">
+        <img src="img2.jpeg" alt="QR Code Payment">
+      </div>
+
+     
+
+      <div class="gallery-card">
+        <img src="img4.jpeg" alt="Digital Wallet">
+      </div>
+
+      <div class="gallery-card">
+        <img src="img5.jpeg" alt="Online Payment">
+      </div>
+
+      <div class="gallery-card">
+        <img src="img6.jpeg" alt="Secure Transaction">
+      </div>
+
+      <div class="gallery-card">
+        <img src="img7.jpeg" alt="PhonePe Payment">
+      </div>
+
+    </div>
+  </div>
+</section>
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>Digital Payment Training · UPI Guide · Frontend-only · No backend required</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
